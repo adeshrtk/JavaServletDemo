@@ -9,7 +9,19 @@ import javax.servlet.http.HttpServletResponse;
 
 public class AddServlet extends HttpServlet {
 
-	public void service(HttpServletRequest req, HttpServletResponse res) throws IOException {
+	// Use Service method
+//	public void service(HttpServletRequest req, HttpServletResponse res) throws IOException {
+//		int i = Integer.parseInt(req.getParameter("num1"));
+//		int j = Integer.parseInt(req.getParameter("num2"));
+//		
+//		int k = i + j;
+//		
+//		PrintWriter out = res.getWriter();		
+//		
+//		out.println("The sum is: " + k);
+//	}
+	
+	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		int i = Integer.parseInt(req.getParameter("num1"));
 		int j = Integer.parseInt(req.getParameter("num2"));
 		
