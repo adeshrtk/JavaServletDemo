@@ -25,10 +25,26 @@
   <servlet>
   	<servlet-name>sq</servlet-name>
   	<servlet-class>com.servletdemo.SqServlet</servlet-class>
+  	
+  	<init-param>
+  		<param-name>servletname</param-name>
+  		<param-value>Square Servlet</param-value>
+  	</init-param>
   </servlet>
   
   <servlet-mapping>
   	<servlet-name>sq</servlet-name>
   	<url-pattern>/sq</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> 
+ 
+  
+  <context-param>
+  	<param-name>name</param-name>
+  	<param-value>Adesh</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>phone</param-name>
+  	<param-value>iPhone</param-value>
+  </context-param>
 </web-app>

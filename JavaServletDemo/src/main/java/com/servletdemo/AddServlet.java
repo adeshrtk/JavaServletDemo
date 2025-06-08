@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
@@ -59,7 +61,11 @@ public class AddServlet extends HttpServlet {
 		
 		Cookie cookie = new Cookie("k", k + "");
 		res.addCookie(cookie);
+	
+		
 		
 		res.sendRedirect("sq?k=" + k);
 	}
+	
+	
 }

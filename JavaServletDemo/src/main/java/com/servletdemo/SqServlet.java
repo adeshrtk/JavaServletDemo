@@ -3,6 +3,8 @@ package com.servletdemo;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -38,7 +40,21 @@ public class SqServlet extends HttpServlet {
 			
 			PrintWriter out = res.getWriter();
 			out.println("Result is : " + k);
+			
+			out.println("Hi ");
+			
+			ServletContext ctx = getServletContext();
+			String name = ctx.getInitParameter("name");
+			out.println(name);
+			
+			String phone = ctx.getInitParameter("phone");
+			out.println(phone);			
+			
+			ServletConfig cg = getServletConfig();
+			String str = cg.getInitParameter("servletname");
+			out.println(str);
 		
 			System.out.println("Sq called");
-		}
+	}	
+	
 }
