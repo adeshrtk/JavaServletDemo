@@ -9,13 +9,25 @@ import javax.servlet.http.HttpServletResponse;
 
 public class SqServlet extends HttpServlet {
 
-	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
+//	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
+//		
+//		int k = (int)req.getAttribute("k");
+//		
+//		k = k * k;
+//		
+//		PrintWriter out = res.getWriter();
+//		out.println("Square of No is = " + k);
+//	}
+	
+public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		
-		int k = (int)req.getAttribute("k");
+		int k = Integer.parseInt(req.getParameter("k"));
 		
 		k = k * k;
 		
 		PrintWriter out = res.getWriter();
-		out.println("Square of No is = " + k);
+		out.println("Result is : " + k);
+	
+		System.out.println("Sq called");
 	}
 }
